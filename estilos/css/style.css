@@ -1,5 +1,93 @@
-body {
-  background-color: blue;
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+}
+.logo span {
+  color: #881014;
+}
+
+.contenedor-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 20rem;
+  padding: 6rem 4rem;
+  background-color: #881014;
+  animation: desplazamiento 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+  z-index: 5;
+}
+
+.btn-menu {
+  padding-bottom: 1.5rem;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.hamburguesa:hover {
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  display: block;
+  background-color: #000;
+  width: 3rem;
+  height: 0.3rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+.btn-cerrar:hover {
+  cursor: pointer;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 0;
+  right: 5rem;
+  margin: 0;
+  padding-right: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h1, h2 {
+  font-family: "Baskervville SC", serif;
+  color: #000;
+}
+
+h3, a, p {
+  font-family: "Caveat", cursive;
+  color: #000;
+}
+
+.contenedor {
+  max-width: 80rem;
+  margin: 0 auto;
+  width: 95%;
+}
+
+.ocultar {
+  display: none;
+}
+
+.pantalla-completa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
 }
 
 /*# sourceMappingURL=style.css.map */

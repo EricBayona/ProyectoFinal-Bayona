@@ -1,1 +1,29 @@
-body{background-color: blue;}
+@import "variables";
+@import "header";
+
+
+// globales
+h1,h2{
+    font-family: $titulos;
+    color: $negro;
+}
+h3,a,p{
+    font-family: $parrafos;
+    color: $negro;
+}
+.contenedor {
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 95%;
+}
+.ocultar{
+    display: none;
+}
+.pantalla-completa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+}
