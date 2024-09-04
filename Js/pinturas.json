@@ -1,0 +1,31 @@
+
+[{
+    "id":1,
+    "nombre":"La gran ola de Kanagawa",
+    "autor":"Katsushika Hokusai"
+     },
+     {
+    "id":2,
+    "nombre":"Creación de Adán en la Capilla Sixtina",
+    "autor":"Miguel Ángel Buonarroti"
+     },
+     {
+    "id":3,
+    "nombre":"El jardín de las Delicias",
+    "autor":"El Bosco"
+     },
+     {
+    "id":4,
+    "nombre":"El Guernica",
+    "autor":"Pablo Picasso"
+     },
+     {
+    "id":5,
+    "nombre":"La Gioconda",
+    "autor":"Leonardo da Vinci"
+     },
+     {
+    "id":6,
+    "nombre":"La sorpresa del trigo",
+    "autor":"Maruja Mallo"
+     }]

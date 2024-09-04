@@ -6,8 +6,8 @@ header.innerHTML=`
             </div>
             <nav class="contenedor-nav ocultar">
                 <a class="btn-menu" href="index.html">Inicio</a>
-                <a class="btn-menu" href="google.com">Pinturas</a>
-                <a class="btn-menu" href="#">Esculturas</a>
+                <a class="btn-menu" href="#pinturas">Pinturas</a>
+                <a class="btn-menu" href="#pinturas-consumidas-desde-api">Pinturas consumidas por Api</a>
                 <a class="btn-menu" href="#">Favoritos</a>
                 <a class="btn-menu" href="#">Sobre Nosotros</a>
                 <a class="btn-menu" href="#">contacto</a>

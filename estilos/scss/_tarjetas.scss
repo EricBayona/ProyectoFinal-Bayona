@@ -1,0 +1,17 @@
+#pinturas-consumidas-desde-api, #pinturas{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(13rem, 1fr));
+    width:80%;
+    margin: 1rem auto; 
+}
+.tarjeta-api{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+
+    & img{
+        width: 10rem;
+        aspect-ratio: 16/9
+    }
+}
