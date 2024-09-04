@@ -1,6 +1,6 @@
 const header = document.querySelector('#header');
 header.innerHTML=`
-    <div class="contenedor-header contenedor">
+    <div class="contenedor-navegacion contenedor">
             <div class="logo">
                 <p>Obras de <span class="rojo">Arte</span></p>
             </div>
@@ -17,7 +17,20 @@ header.innerHTML=`
                 <span></span>
                 <span></span>
             </div>
-        </div>
+    </div>
+    <div class="contenido-header">
+         <div class="contenedor-encabezado">
+                <div class="texto-encabezado">
+                    <div class="titulo-encabezado contenedor">
+                        <h2>Galeria de Arte</h2>
+                        <span>Curso JavaScript CoderHouse</span>
+                    </div>
+                </div>
+                <video autoplay loop muted>
+                    <source src="assets/videos/5201913-hd_1920_1080_24fps.mp4">
+                </video>
+            </div>
+    </div>
     `
 const menu = document.querySelector('.hamburguesa');
 const navegacion = document.querySelector('.contenedor-nav');
