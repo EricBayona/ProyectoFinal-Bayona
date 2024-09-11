@@ -123,20 +123,20 @@ video {
   height: 100%;
 }
 
-#pinturas-consumidas-desde-api, #pinturas {
+#pinturas-consumidas-desde-api, #pinturas, #contenedor-favoritos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
   width: 80%;
   margin: 1rem auto;
 }
 
-.tarjeta-api {
+.tarjeta-api, .tarjeta-ObrasDeArte {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
 }
-.tarjeta-api img {
+.tarjeta-api img, .tarjeta-ObrasDeArte img {
   width: 10rem;
   aspect-ratio: 16/9;
 }

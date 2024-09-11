@@ -31,7 +31,7 @@ function crearTarjetasPinturas() {
             const cajaContenedora = favorito.parentNode;
             const contenedorPrincipal = cajaContenedora.parentNode;
             console.log(cajaContenedora);
-
+            
             const contenidoHTML = cajaContenedora.outerHTML;
 
 
@@ -55,6 +55,4 @@ function crearTarjetasPinturas() {
         })
     })
 }
-
-
 

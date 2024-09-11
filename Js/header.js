@@ -5,7 +5,7 @@ header.innerHTML=`
                 <p>Obras de <span class="rojo">Arte</span></p>
             </div>
             <nav class="contenedor-nav ocultar">
-                <a class="btn-menu" href="index.html">Inicio</a>
+                <a class="btn-menu" href="../index.html">Inicio</a>
                 <a class="btn-menu" href="#pinturas">Pinturas</a>
                 <a class="btn-menu" href="#pinturas-consumidas-desde-api">Pinturas consumidas por Api</a>
                 <a class="btn-menu" href="./pages/favoritos.html">Favoritos</a>
@@ -16,19 +16,6 @@ header.innerHTML=`
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-    </div>
-    <div class="contenido-header">
-         <div class="contenedor-encabezado">
-                <div class="texto-encabezado">
-                    <div class="titulo-encabezado contenedor">
-                        <h2>Galeria de Arte</h2>
-                        <span>Curso JavaScript CoderHouse</span>
-                    </div>
-                </div>
-                <video autoplay loop muted>
-                    <source src="assets/videos/5201913-hd_1920_1080_24fps.mp4">
-                </video>
             </div>
     </div>
     `
@@ -83,3 +70,19 @@ const cerrarMenu =(boton,overlay)=>{
         })
     })
 }
+const videoInicio = document.querySelector('#video-inicio');
+videoInicio.innerHTML=`
+<div class="contenido-header">
+         <div class="contenedor-encabezado">
+                <div class="texto-encabezado">
+                    <div class="titulo-encabezado contenedor">
+                        <h2>Galeria de Arte</h2>
+                        <span>Curso JavaScript CoderHouse</span>
+                    </div>
+                </div>
+                <video autoplay loop muted>
+                    <source src="assets/videos/5201913-hd_1920_1080_24fps.mp4">
+                </video>
+            </div>
+    </div>
+`

@@ -46,6 +46,13 @@ fetch('https://api.harvardartmuseums.org/object?apikey=5304694a-0cb5-4c00-81ab-1
                 contenedorFavoritosAgregados.push(obra);
                 localStorage.setItem('favoritosGuardados', JSON.stringify(contenedorFavoritosAgregados));
             }
+            Toastify({
+
+              text: "Agregado a Favoritos",
+              
+              duration: 3000
+              
+              }).showToast();
         })
     })
   })
