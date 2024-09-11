@@ -2,12 +2,12 @@ const header = document.querySelector('#header');
 header.innerHTML=`
     <div class="contenedor-navegacion contenedor">
             <div class="logo">
-                <p>Obras de <span class="rojo">Arte</span></p>
+                <a href="../index.html" <p>Obras de <span class="rojo">Arte</span></p> </a>
             </div>
             <nav class="contenedor-nav ocultar">
                 <a class="btn-menu" href="../index.html">Inicio</a>
-                <a class="btn-menu" href="#pinturas">Pinturas</a>
-                <a class="btn-menu" href="#pinturas-consumidas-desde-api">Pinturas consumidas por Api</a>
+                <a class="btn-menu" href="../index.html#pinturas">Pinturas</a>
+                <a class="btn-menu" href="../index.html#pinturas-consumidas-desde-api">Pinturas consumidas por Api</a>
                 <a class="btn-menu" href="./pages/favoritos.html">Favoritos</a>
                 <a class="btn-menu" href="#">Sobre Nosotros</a>
                 <a class="btn-menu" href="#">contacto</a>

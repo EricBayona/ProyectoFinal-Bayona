@@ -15,6 +15,9 @@ function crearTarjetasPinturas() {
     pinturas.forEach(pintura => {
         const nuevaPintura = document.createElement("div");
         nuevaPintura.classList = "tarjeta-api";
+        nuevaPintura.setAttribute("data-aos", "fade-up");
+        nuevaPintura.setAttribute("data-aos-duration", "3000");
+        nuevaPintura.setAttribute("data-aos-anchor-placement", "bottom-bottom");
         nuevaPintura.innerHTML = `
         <img src="assets/imagenes/${pintura.id}.jpg" class="imagen-pintura">
         <h3>${pintura.nombre}</h3>

@@ -11,6 +11,11 @@ fetch('https://api.harvardartmuseums.org/object?apikey=5304694a-0cb5-4c00-81ab-1
 
         const tarjetaApi = document.createElement('div');
         tarjetaApi.classList.add('tarjeta-api');
+        tarjetaApi.setAttribute("data-aos", "fade-up");
+        tarjetaApi.setAttribute("data-aos-anchor-placement", "bottom-bottom");
+        tarjetaApi.setAttribute("data-aos", "flip-left");
+        tarjetaApi.setAttribute("data-aos-easing", "ease-out-cubic");
+        tarjetaApi.setAttribute("data-aos-duration", "2000");
         tarjetaApi.innerHTML = `
           <h2>${title}</h2>
           <img src="${imageUrl}" alt="${title}" class="imagen-pintura" style="max-width: 100%; height: auto;">
@@ -46,7 +51,7 @@ fetch('https://api.harvardartmuseums.org/object?apikey=5304694a-0cb5-4c00-81ab-1
 
               text: "Agregado a Favoritos",
               
-              duration: 3000
+              duration: 2000
               
               }).showToast();
         })

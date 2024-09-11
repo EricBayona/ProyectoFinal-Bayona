@@ -8,6 +8,9 @@ h1,h2{
     font-family: $titulos;
     color: $negro;
 }
+a{
+    text-decoration: none;
+}
 h3,a,p{
     font-family: $parrafos;
     color: $negro;

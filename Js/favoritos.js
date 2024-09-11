@@ -31,7 +31,7 @@ function crearTarjetasFavoritos() {
 
                 text: "Eliminado de Favoritos",
                 
-                duration: 3000
+                duration: 2000
                 
                 }).showToast();
             

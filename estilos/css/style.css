@@ -5,6 +5,7 @@
 }
 
 .logo {
+  margin-top: 1rem;
   font-size: 2rem;
 }
 .logo span {
@@ -125,7 +126,7 @@ video {
 
 #pinturas-consumidas-desde-api, #pinturas, #contenedor-favoritos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
   width: 80%;
   margin: 1rem auto;
 }
@@ -137,13 +138,16 @@ video {
   padding: 1rem;
 }
 .tarjeta-api img, .tarjeta-ObrasDeArte img {
-  width: 10rem;
   aspect-ratio: 16/9;
 }
 
 h1, h2 {
   font-family: "Baskervville SC", serif;
   color: #000;
+}
+
+a {
+  text-decoration: none;
 }
 
 h3, a, p {
