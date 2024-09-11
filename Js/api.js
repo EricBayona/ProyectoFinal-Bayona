@@ -15,48 +15,41 @@ fetch('https://api.harvardartmuseums.org/object?apikey=5304694a-0cb5-4c00-81ab-1
           <h2>${title}</h2>
           <img src="${imageUrl}" alt="${title}" style="max-width: 100%; height: auto;">
           <p><strong>Autor:</strong> ${artist}</p>
+          <button class="favoritos">Agregar a Favoritos</button>
         `;
         pinturasConsumidasApi.appendChild(tarjetaApi);
         count++;
       }
     });
+    const btnFavoritos = document.querySelectorAll('.favoritos');
+    btnFavoritos.forEach(favorito => {
+        favorito.addEventListener('click', () => {
+          
+            const cajaContenedora = favorito.parentNode;
+            console.log(cajaContenedora);
+            const contenidoHTML = cajaContenedora.outerHTML;
+
+
+            const obraExistente = contenedorFavoritosAgregados.find(obra => obra.contenidoHTML === contenidoHTML);
+            if (!obraExistente) {
+                const imagen = cajaContenedora.querySelector('img').src;
+                const rutaImagen = imagen.replace('http://127.0.0.1:5501', '..');
+                const titulo = cajaContenedora.querySelector('h2').textContent;
+                const autor = cajaContenedora.querySelector('p').textContent;
+
+                const obra = {
+                    rutaImagen,
+                    titulo,
+                    autor,
+                    contenidoHTML
+                };
+                contenedorFavoritosAgregados.push(obra);
+                localStorage.setItem('favoritosGuardados', JSON.stringify(contenedorFavoritosAgregados));
+            }
+        })
+    })
   })
   .catch(error => console.error('Error:', error));
-
-
-//   const ObrasDeArte = [
-//     {
-//         id:1,
-//         nombre:"La gran ola de Kanagawa",
-//         autor:'Katsushika Hokusai',
-//     },
-//     {
-//         id:2,
-//         nombre:"Creación de Adán en la Capilla Sixtina",
-//         autor:'Miguel Ángel Buonarroti',
-//     },
-//     {
-//         id:3,
-//         nombre:"El jardín de las Delicias",
-//         autor:'El Bosco',
-//     },
-//     {
-//         id:4,
-//         nombre:"El Guernica",
-//         autor:'Pablo Picasso',
-//     },
-//     {
-//         id:5,
-//         nombre:"La Gioconda",
-//         autor:'Leonardo da Vinci',
-//     },
-//     {
-//         id:6,
-//         nombre:"La sorpresa del trigo",
-//         autor:'Maruja Mallo',
-//     },
-// ]
-
 
 
 

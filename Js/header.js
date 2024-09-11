@@ -8,7 +8,7 @@ header.innerHTML=`
                 <a class="btn-menu" href="index.html">Inicio</a>
                 <a class="btn-menu" href="#pinturas">Pinturas</a>
                 <a class="btn-menu" href="#pinturas-consumidas-desde-api">Pinturas consumidas por Api</a>
-                <a class="btn-menu" href="#">Favoritos</a>
+                <a class="btn-menu" href="./pages/favoritos.html">Favoritos</a>
                 <a class="btn-menu" href="#">Sobre Nosotros</a>
                 <a class="btn-menu" href="#">contacto</a>
             </nav>
@@ -32,6 +32,7 @@ header.innerHTML=`
             </div>
     </div>
     `
+
 const menu = document.querySelector('.hamburguesa');
 const navegacion = document.querySelector('.contenedor-nav');
 const btnMenus = document.querySelectorAll('.btn-menu');
