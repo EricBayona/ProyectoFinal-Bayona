@@ -20,14 +20,23 @@ function crearTarjetasFavoritos() {
 
         const btnEliminar = nuevaTarjeta.querySelector('.eliminar-favoritos');
         btnEliminar.addEventListener('click', () => {
-
             const index = favoritosGuardados.findIndex(item => item.titulo === favorito.titulo);
             if (index !== -1) {
                 favoritosGuardados.splice(index, 1); 
                 localStorage.setItem('favoritosGuardados', JSON.stringify(favoritosGuardados)); 
                 nuevaTarjeta.remove();
+               
             };
+            Toastify({
+
+                text: "Eliminado de Favoritos",
+                
+                duration: 3000
+                
+                }).showToast();
+            
     })
+    
     });
 }
 

@@ -4,37 +4,31 @@ fetch("./js/pinturas.json")
     .then(response => response.json())
     .then(data => {
         pinturas = data;
-        crearTarjetasPinturas()
-    })
+        crearTarjetasPinturas();
+    });
 
 const contenedorFavoritosAgregados = JSON.parse(localStorage.getItem('favoritosGuardados')) || [];
 
-
-const contendorTarjetas = document.querySelector('#pinturas')
+const contendorTarjetas = document.querySelector('#pinturas');
 function crearTarjetasPinturas() {
-    contendorTarjetas.innerHTML = ""
+    contendorTarjetas.innerHTML = "";
     pinturas.forEach(pintura => {
         const nuevaPintura = document.createElement("div");
         nuevaPintura.classList = "tarjeta-api";
         nuevaPintura.innerHTML = `
-        <img src="assets/imagenes/${pintura.id}.jpg">
+        <img src="assets/imagenes/${pintura.id}.jpg" class="imagen-pintura">
         <h3>${pintura.nombre}</h3>
         <p>${pintura.autor}</p>
         <button class="favoritos">Agregar a Favoritos</button>
-        
     `;
         contendorTarjetas.appendChild(nuevaPintura);
     });
+
     const btnFavoritos = document.querySelectorAll('.favoritos');
     btnFavoritos.forEach(favorito => {
         favorito.addEventListener('click', () => {
             const cajaContenedora = favorito.parentNode;
-            const contenedorPrincipal = cajaContenedora.parentNode;
-            console.log(cajaContenedora);
-            
             const contenidoHTML = cajaContenedora.outerHTML;
-
-
             const obraExistente = contenedorFavoritosAgregados.find(obra => obra.contenidoHTML === contenidoHTML);
             if (!obraExistente) {
                 const imagen = cajaContenedora.querySelector('img').src;
@@ -52,7 +46,6 @@ function crearTarjetasPinturas() {
                 contenedorFavoritosAgregados.push(obra);
                 localStorage.setItem('favoritosGuardados', JSON.stringify(contenedorFavoritosAgregados));
             }
-        })
-    })
+        });
+    });
 }
-

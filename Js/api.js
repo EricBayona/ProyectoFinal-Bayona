@@ -13,7 +13,7 @@ fetch('https://api.harvardartmuseums.org/object?apikey=5304694a-0cb5-4c00-81ab-1
         tarjetaApi.classList.add('tarjeta-api');
         tarjetaApi.innerHTML = `
           <h2>${title}</h2>
-          <img src="${imageUrl}" alt="${title}" style="max-width: 100%; height: auto;">
+          <img src="${imageUrl}" alt="${title}" class="imagen-pintura" style="max-width: 100%; height: auto;">
           <p><strong>Autor:</strong> ${artist}</p>
           <button class="favoritos">Agregar a Favoritos</button>
         `;
@@ -24,12 +24,8 @@ fetch('https://api.harvardartmuseums.org/object?apikey=5304694a-0cb5-4c00-81ab-1
     const btnFavoritos = document.querySelectorAll('.favoritos');
     btnFavoritos.forEach(favorito => {
         favorito.addEventListener('click', () => {
-          
             const cajaContenedora = favorito.parentNode;
-            console.log(cajaContenedora);
             const contenidoHTML = cajaContenedora.outerHTML;
-
-
             const obraExistente = contenedorFavoritosAgregados.find(obra => obra.contenidoHTML === contenidoHTML);
             if (!obraExistente) {
                 const imagen = cajaContenedora.querySelector('img').src;
@@ -54,6 +50,23 @@ fetch('https://api.harvardartmuseums.org/object?apikey=5304694a-0cb5-4c00-81ab-1
               
               }).showToast();
         })
+        const imagenes = document.querySelectorAll('.imagen-pintura');
+        imagenes.forEach(imagen => {
+            imagen.addEventListener('click', () => {
+                const modal = document.getElementById("modal");
+                const modalImg = document.getElementById("imgModal");
+                const captionText = document.getElementById("caption");
+    
+                modal.style.display = "block";
+                modalImg.src = imagen.src;
+                captionText.innerHTML = imagen.nextElementSibling.innerHTML;
+    
+                const span = document.getElementsByClassName("close")[0];
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+            });
+        });
     })
   })
   .catch(error => console.error('Error:', error));
