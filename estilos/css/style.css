@@ -131,6 +131,11 @@ video {
   margin: 1rem auto;
 }
 
+@media screen and (max-width: 425px) {
+  #pinturas, #pinturas-consumidas-desde-api {
+    display: block;
+  }
+}
 .tarjeta-api, .tarjeta-ObrasDeArte {
   display: flex;
   flex-direction: column;
