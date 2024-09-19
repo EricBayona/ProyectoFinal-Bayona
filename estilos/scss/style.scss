@@ -1,15 +1,27 @@
 @import "variables";
 @import "header";
 @import "tarjetas";
+@import "footer";
 
 
 // globales
+html, body {
+    height: 100%;
+    margin: 0;
+}
+main {
+    min-height: calc(100vh - 100px);
+}
 h1,h2{
     font-family: $titulos;
     color: $negro;
 }
-a{
+ul{
+    padding: 0;
+}
+a, li{
     text-decoration: none;
+    list-style: none;
 }
 h3,a,p{
     font-family: $parrafos;

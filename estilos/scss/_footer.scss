@@ -1,0 +1,32 @@
+#footer {
+    height: 100px; /* Ajusta esta altura según el tamaño de tu footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.contenedor-footer{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(231, 226, 178, 0.91);
+    align-items: baseline;
+    bottom: 0;
+}
+.mapa-sitio {
+    padding-right: 1rem;
+    & p{
+        font-size: 2rem;
+        color: $verde;
+    }
+}
+.datos{
+    padding-left: 1rem;
+}
+@media screen and (max-width:645px){
+    .contenedor-footer{
+        display: block;
+        text-align: center;
+    }
+}

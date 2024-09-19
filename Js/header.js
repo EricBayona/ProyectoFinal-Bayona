@@ -9,8 +9,6 @@ header.innerHTML=`
                 <a class="btn-menu" href="../index.html#pinturas">Pinturas</a>
                 <a class="btn-menu" href="../index.html#pinturas-consumidas-desde-api">Pinturas consumidas por Api</a>
                 <a class="btn-menu" href="./pages/favoritos.html">Favoritos</a>
-                <a class="btn-menu" href="#">Sobre Nosotros</a>
-                <a class="btn-menu" href="#">contacto</a>
             </nav>
             <div class="hamburguesa">
                 <span></span>

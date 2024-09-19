@@ -3,6 +3,14 @@ const favoritosGuardados = JSON.parse(localStorage.getItem('favoritosGuardados')
 
 function crearTarjetasFavoritos() {
     const contenedorFavoritos = document.querySelector('#contenedor-favoritos');
+    const mensajeError = document.querySelector('#mensaje-error');
+
+    if (favoritosGuardados.length === 0) {
+        mensajeError.style.display = 'block';
+    } else {
+        mensajeError.style.display = 'none';
+    }
+    
     favoritosGuardados.forEach(favorito => {
         const nuevaTarjeta = document.createElement('div');
         nuevaTarjeta.classList.add('tarjeta-ObrasDeArte'); 
@@ -14,7 +22,6 @@ function crearTarjetasFavoritos() {
                 <button class="eliminar-favoritos">Eliminar de Favoritos</button>
             </div>
         `;
-        
         contenedorFavoritos.appendChild(nuevaTarjeta);
 
 
